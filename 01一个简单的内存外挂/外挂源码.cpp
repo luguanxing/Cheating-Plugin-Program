@@ -1,5 +1,5 @@
 //
-//  01Ò»¸ö¼òµ¥µÄÄÚ´æÍâ¹Ò.cpp
+//  01ä¸€ä¸ªç®€å•çš„å†…å­˜å¤–æŒ‚.cpp
 //  C/C++
 //
 //  Created by luguanxing.
@@ -10,27 +10,27 @@
 #include <stdio.h>
 
 int main() {
-	HWND h = ::FindWindow(NULL, "Super Mario XP");	//	Ñ°ÕÒ²¢´ò¿ª½ø³Ì
+	HWND h = ::FindWindow(NULL, "Super Mario XP");	//	å¯»æ‰¾å¹¶æ‰“å¼€è¿›ç¨‹
 	DWORD processid;
 	GetWindowThreadProcessId(h, &processid);
 	HANDLE hprocess = 0;
 	hprocess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, processid);
 
-	if (hprocess == 0) {	//	¶ÔÓ¦´¦Àí
-		printf("´ò¿ª½ø³ÌÊ§°Ü!\n");
+	if (hprocess == 0) {	//	å¯¹åº”å¤„ç†
+		printf("æ‰“å¼€è¿›ç¨‹å¤±è´¥!\n");
 		return 1;
 	} else {
-		printf("´ò¿ª½ø³Ì³É¹¦!\n");
+		printf("æ‰“å¼€è¿›ç¨‹æˆåŠŸ!\n");
 
-		DWORD hp = 10;	//	ÒªĞŞ¸ÄµÄÓÎÏ·Êı¾İ×î´óÖµ	
+		DWORD hp = 10;	//	è¦ä¿®æ”¹çš„æ¸¸æˆæ•°æ®æœ€å¤§å€¼	
 		DWORD heart = 99;
 		DWORD life = 99;
 
-		DWORD addr = 0x00428282;	//	Í¨¹ıCEÕÒµ½µÄÓÎÏ·Êı¾İµØÖ·
+		DWORD addr = 0x00428282;	//	é€šè¿‡CEæ‰¾åˆ°çš„æ¸¸æˆæ•°æ®åœ°å€
 		DWORD addr2 = 0x00428292;
 		DWORD addr3 = 0x004282a2;
   
-		DWORD res = WriteProcessMemory(hprocess, (LPVOID)addr, &hp, 4, 0);	//	Ğ´ÈëÄÚ´æĞŞ¸ÄÓÎÏ·Êı¾İ
+		DWORD res = WriteProcessMemory(hprocess, (LPVOID)addr, &hp, 4, 0);	//	å†™å…¥å†…å­˜ä¿®æ”¹æ¸¸æˆæ•°æ®
 		DWORD res2 = WriteProcessMemory(hprocess, (LPVOID)addr2, &heart, 4, 0);
 		DWORD res3 = WriteProcessMemory(hprocess, (LPVOID)addr3, &life, 4, 0);
 	
