@@ -8,30 +8,26 @@ using namespace std;
 
 
 HWND gameh;
-RECT r1;
-POINT p;
-DWORD byread;
 DWORD processid = 0;
 HANDLE processh = 0;
-int t = 100;
-byte chessdata[11][19];		//Êı¾İ±£´æ»º³åÇø,¼ÙÉèÆåÅÌÎª11*19
-const char *gamename = "Á¬Á¬¿´";
+byte chessdata[11][19];		//æ•°æ®ä¿å­˜ç¼“å†²åŒº,å‡è®¾æ£‹ç›˜ä¸º11*19
+const char *gamename = "è¿è¿çœ‹";
 
 struct point {
-	int x, y, direct;	//¾ßÌå¼û"Á¬Á¬¿´BFSËã·¨"
+	int x, y, direct;	//å…·ä½“ä½¿ç”¨å’Œç®—æ³•è§"è¿è¿çœ‹BFSç®—æ³•"
 	int step, hp;
 };
 
-void readchess() {	//¶ÁÊı¾İ
+void readchess() {	//è¯»æ•°æ®å¹¶æ›´æ–°
 	gameh = ::FindWindow(NULL, gamename);
 	::GetWindowThreadProcessId(gameh, &processid);
 	processh = ::OpenProcess(PROCESS_ALL_ACCESS, false, processid);
-	LPCVOID pbase = (LPCVOID)ÆåÅÌ»ùÖ·;
+	LPCVOID pbase = (LPCVOID)æ£‹ç›˜åŸºå€;
 	LPVOID  nbuffer = (LPVOID)&chessdata;
 	::ReadProcessMemory(processh, pbase, nbuffer, 11*19, &byread);
 }
 
-void click2p(POINT p1, POINT p2) {	//µã»÷Á½¸öµãµÄ²Ù×÷¹¦ÄÜ
+void click2p(POINT p1, POINT p2) {	//ç‚¹å‡»ä¸¤ä¸ªç‚¹çš„æ“ä½œåŠŸèƒ½
 	HWND hwnd=FindWindow(NULL, gamename);
 	int lparam;
 	lparam=((p1.y*35+192)<<16)+(p1.x*31+21);
@@ -43,7 +39,7 @@ void click2p(POINT p1, POINT p2) {	//µã»÷Á½¸öµãµÄ²Ù×÷¹¦ÄÜ
 }
 
 
-void clearapair() {	//ÕÒµ½¿ÉÏûÈ¥µÄÁ½¸öµã²¢µã»÷
+void clearapair() {	//æ‰¾åˆ°å¯æ¶ˆå»çš„ä¸¤ä¸ªç‚¹å¹¶ç‚¹å‡»
 	 POINT p1, p2;
 	 int x1, y1, x2, y2;
 	  for (y1=0; y1<11; y1++)
