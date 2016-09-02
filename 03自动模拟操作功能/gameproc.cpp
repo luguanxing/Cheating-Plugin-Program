@@ -1,9 +1,5 @@
 #include<windows.h>
 #include<iostream>
-#include<string.h>
-#include<string>
-#include<queue>
-#include<stdio.h>
 using namespace std;
 
 
@@ -13,8 +9,8 @@ HANDLE processh = 0;
 byte chessdata[11][19];		//数据保存缓冲区,假设棋盘为11*19
 const char *gamename = "连连看";
 
-struct point {
-	int x, y, direct;	//具体使用和算法见"连连看BFS算法"
+struct point {		//具体使用和算法见"连连看BFS算法"
+	int x, y, direct;
 	int step, hp;
 };
 
