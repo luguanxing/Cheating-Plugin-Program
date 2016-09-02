@@ -43,7 +43,8 @@ int main() {
         printf("您有钱:%d0\n", sun);
 
         /*
-        DWORD maxsun = 99999;     //  写入内存修改游戏数据
+        附加部分，写入内存修改游戏数据
+        DWORD maxsun = 99999;     
         DWORD maxmoney = 99999;
         WriteProcessMemory(processh, (LPVOID)mbase, &maxsun, 4, 0);
         WriteProcessMemory(processh, (LPVOID)mbase2, &maxmoney, 4, 0);
