@@ -2,12 +2,11 @@
 #include<iostream>
 using namespace std;
 
-
 HWND gameh;
 DWORD processid = 0;
 HANDLE processh = 0;
 byte chessdata[11][19];		//数据保存缓冲区,假设棋盘为11*19
-const char *gamename = "连连看";
+const char *gamename = "连连看";	//某连连看游戏名称，可通过SPY++查找
 
 struct point {		//具体使用和算法见"连连看BFS算法"
 	int x, y, direct;
@@ -33,7 +32,6 @@ void click2p(POINT p1, POINT p2) {	//点击两个点的操作功能
 	SendMessage(hwnd, WM_LBUTTONDOWN, 0, lparam);
 	SendMessage(hwnd, WM_LBUTTONUP, 0, lparam);
 }
-
 
 void clearapair() {	//找到可消去的两个点并点击
 	 POINT p1, p2;
