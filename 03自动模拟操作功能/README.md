@@ -16,7 +16,7 @@
 ![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/03%E8%87%AA%E5%8A%A8%E6%A8%A1%E6%8B%9F%E6%93%8D%E4%BD%9C%E5%8A%9F%E8%83%BD/pictures/0.jpg)<br><br>
 本次游戏对象为某连连看游戏<br><br>
 试玩发现需要进行棋子确定和模拟鼠标操作<br><br>
-通过CE确定棋盘基址获得游戏数据，再利用算法确定目标，执行鼠标操作<br><br>
+通过CE确定棋盘基址获得游戏数据，再利用算法确定目标，执行鼠标操作<br><br><br><br>
 
 
 ## 要用的API函数简单介绍
