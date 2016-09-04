@@ -35,7 +35,7 @@ LRESULT **SendMessage**（HWND hWnd，UINT Msg，WPARAM wParam，LPARAM IParam�
 
 ![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/03%E8%87%AA%E5%8A%A8%E6%A8%A1%E6%8B%9F%E6%93%8D%E4%BD%9C%E5%8A%9F%E8%83%BD/pictures/1.jpg)<br>
 **运行外挂**<br>
-我用MFC将功能几个函数封装为按钮<br>
+我用MFC将几个函数功能封装为按钮<br>
 1.单消：读取数据并消一对<br>
 2.自动：恢复/暂停一个线程，这个线程有消一对和延时的循环功能<br>
 3.秒杀：不延时，直接消999对<br><br><br><br>
