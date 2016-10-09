@@ -1,17 +1,17 @@
 //
-//  04¼òµ¥DLL×¢ÈëÓÎÏ·(×÷±×Ä£¿éDLL²¿·Ö)
+//  04ç®€å•DLLæ³¨å…¥æ¸¸æˆ(ä½œå¼Šæ¨¡å—DLLéƒ¨åˆ†)
 //  C/C++
 //
 //  Created by luguanxing.
 //  Copyright @2016 LGX. All rights reserved.
 //
 #include <windows.h>
-#define Dllfunciton extern "C" __declspec(dllexport)	//ÒÔC·½Ê½µ¼³ö
+#define Dllfunciton extern "C" __declspec(dllexport)	//ä»¥Cæ–¹å¼å¯¼å‡º
 
 Dllfunciton void lockdata();
 Dllfunciton DWORD WINAPI inject(LPVOID);
 
-void lockdata() {
+void lockdata() {	//é”å®šäººç‰©æ•°å€¼åŠŸèƒ½
 	while (true) {
 		DWORD hp = 10;
 		DWORD heart = 99;
@@ -21,7 +21,7 @@ void lockdata() {
 		DWORD addr2 = 0x00428292;
 		DWORD addr3 = 0x004282a2;
   
-		DWORD res = WriteProcessMemory(INVALID_HANDLE_VALUE, (LPVOID)addr, &hp, 4, 0);	//Ğ´Èë×ÔÉíĞŞ¸ÄÓÎÏ·Êı¾İ
+		DWORD res = WriteProcessMemory(INVALID_HANDLE_VALUE, (LPVOID)addr, &hp, 4, 0);
 		DWORD res2 = WriteProcessMemory(INVALID_HANDLE_VALUE, (LPVOID)addr2, &heart, 4, 0);
 		DWORD res3 = WriteProcessMemory(INVALID_HANDLE_VALUE, (LPVOID)addr3, &life, 4, 0);
 
@@ -29,7 +29,7 @@ void lockdata() {
 	}
 }
 
-DWORD WINAPI inject(LPVOID) {
+DWORD WINAPI inject(LPVOID) {		//åœ¨æ–°çº¿ä¸­ç¨‹æ‰§è¡Œä½œå¼Š
 	lockdata();
 	return true;
 }
@@ -37,7 +37,7 @@ DWORD WINAPI inject(LPVOID) {
 BOOL APIENTRY DllMain(HMODULE hModule,  DWORD  ul_reason_for_call, LPVOID lpReserved) {
 	switch(ul_reason_for_call) {
 		case DLL_PROCESS_ATTACH: {
-			::DisableThreadLibraryCalls(hModule);	//´´½¨Ïß³Ì°üº¬ËÀÑ­»·£¬Îª·À¿¨ËÀ±ØĞëÉèÖÃ
+			::DisableThreadLibraryCalls(hModule);	//åˆ›å»ºçº¿ç¨‹åŒ…å«æ­»å¾ªç¯ï¼Œä¸ºé˜²å¡æ­»å¿…é¡»è®¾ç½®
 			CreateThread(NULL, 0, inject, NULL, 0, NULL);
 		}
 		break;
