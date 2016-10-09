@@ -1,5 +1,5 @@
 //
-//  04¼òµ¥DLL×¢ÈëÓÎÏ·(×¢ÈëÆ÷EXE²¿·Ö)
+//  04ç®€å•DLLæ³¨å…¥æ¸¸æˆ(æ³¨å…¥å™¨EXEéƒ¨åˆ†)
 //  C/C++
 //
 //  Created by luguanxing.
@@ -22,26 +22,25 @@ FARPROC loadfuncaddr = NULL;
 HANDLE hfile;
 
 void getwindow() {
-    hwnd = ::FindWindow(NULL, "Super Mario XP");
+	hwnd = ::FindWindow(NULL, "Super Mario XP");
 	if (hwnd == NULL)
-		MessageBox(NULL, "ÕÒ²»µ½ÓÎÏ·", "´íÎó",  MB_OK);
-    GetWindowThreadProcessId(hwnd, &processid);
-    hprocess = OpenProcess(PROCESS_ALL_ACCESS,FALSE,processid);
+		MessageBox(NULL, "æ‰¾ä¸åˆ°æ¸¸æˆ", "é”™è¯¯",  MB_OK);
+	GetWindowThreadProcessId(hwnd, &processid);
+	hprocess = OpenProcess(PROCESS_ALL_ACCESS,FALSE,processid);
 	if (hprocess == NULL)
-		MessageBox(NULL, "´ò¿ªÓÎÏ·Ê§°Ü", "´íÎó", MB_OK);
+		MessageBox(NULL, "æ‰“å¼€æ¸¸æˆå¤±è´¥", "é”™è¯¯", MB_OK);
 }
 
 
 void inject() {
 	int size = strlen(dllname)+5;
-	procdlladdr = ::VirtualAllocEx(hprocess, NULL, size, MEM_COMMIT, PAGE_READWRITE);	//ÏòÄ¿±êÉêÇë¿Õ¼ä£¬µÃµ½ĞÂ¿Õ¼äµØÖ·
+	procdlladdr = ::VirtualAllocEx(hprocess, NULL, size, MEM_COMMIT, PAGE_READWRITE);	//å‘ç›®æ ‡ç”³è¯·ç©ºé—´ï¼Œå¾—åˆ°æ–°ç©ºé—´åœ°å€
 	if (procdlladdr == NULL)
-		MessageBox(NULL, "ÉêÇë¿Õ¼äÊ§°Ü", "´íÎó", MB_OK);
+		MessageBox(NULL, "ç”³è¯·ç©ºé—´å¤±è´¥", "é”™è¯¯", MB_OK);
 	DWORD writenum;
-	::WriteProcessMemory(hprocess, procdlladdr, dllname, size, &writenum);	//ÏòĞÂ¿Õ¼äĞ´ÈëÒª×¢ÈëµÄDLLÃû³Æ
-	loadfuncaddr = ::GetProcAddress(::GetModuleHandle("kernel32.dll"), loadfunc);	//»ñµÃLoadLibraryAµÄµØÖ·,ÔÚÈÎºÎ½ø³Ì¿Õ¼ä¶¼Ò»Ñù
-	HANDLE hthread = ::CreateRemoteThread(hprocess, NULL, 0, (LPTHREAD_START_ROUTINE)loadfuncaddr, (LPVOID)procdlladdr, 0, NULL);
-	//ĞÂ½¨Ïß³ÌÖ´ĞĞLoadLibrary²ÎÊıÊÇÒÑÔÚÄ¿±ê½ø³ÌĞÂ¿Õ¼äĞ´ÈëµÄDLLÃû³Æ,×¢ÒâÕâ¸öº¯ÊıÔÚ64Î»ÏÂÎŞ·¨³É¹¦
+	::WriteProcessMemory(hprocess, procdlladdr, dllname, size, &writenum);	//å‘æ–°ç©ºé—´å†™å…¥è¦æ³¨å…¥çš„DLLåç§°
+	loadfuncaddr = ::GetProcAddress(::GetModuleHandle("kernel32.dll"), loadfunc);	//è·å¾—LoadLibraryAçš„åœ°å€,åœ¨ä»»ä½•è¿›ç¨‹ç©ºé—´éƒ½ä¸€æ ·
+	HANDLE hthread = ::CreateRemoteThread(hprocess, NULL, 0, (LPTHREAD_START_ROUTINE)loadfuncaddr, (LPVOID)procdlladdr, 0, NULL); 		//æ–°å»ºçº¿ç¨‹æ‰§è¡ŒLoadLibraryå‚æ•°æ˜¯å·²åœ¨ç›®æ ‡è¿›ç¨‹æ–°ç©ºé—´å†™å…¥çš„DLLåç§°,æ³¨æ„è¿™ä¸ªå‡½æ•°åœ¨64ä½ä¸‹æ— æ³•æˆåŠŸ
 	::WaitForSingleObject(hthread, INFINITE); 
 	::CloseHandle(hthread);
 	::CloseHandle(hprocess);
