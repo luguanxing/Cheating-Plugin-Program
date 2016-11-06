@@ -7,7 +7,6 @@
 //
 
 #include <windows.h>
-#include <stdlib.h>
 #define Dllfunciton extern "C" __declspec(dllexport)    //以C方式导出
 
 #pragma comment(linker, "/EXPORT:LpkInitialize=_gamehacker_LpkInitialize,@1")	//设置导出表
@@ -92,7 +91,7 @@ BOOL APIENTRY DllMain(HMODULE hModule,  DWORD  ul_reason_for_call, LPVOID lpRese
 			GetSystemDirectory(syslpk, 250);
 			strcat(syslpk, "\\lpk");
 			hmodule = LoadLibrary(syslpk);	//加载真正系统lpk.dll
-			::LoadLibrary("cheatDLL");	//加载作弊模块cheatDLL.dll
+			::LoadLibrary("cheatDLL");	//核心功能:加载作弊模块cheatDLL.dll
         } break;
         case DLL_THREAD_ATTACH:
         case DLL_THREAD_DETACH:
