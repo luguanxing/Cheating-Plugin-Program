@@ -1,5 +1,5 @@
 //
-//  05¼òµ¥DLL½Ù³Ö(×ÔĞ´LPK.DLLÄ£¿é²¿·Ö)
+//  05ç®€å•DLLåŠ«æŒ(è‡ªå†™LPK.DLLæ¨¡å—éƒ¨åˆ†)
 //  C/C++
 //
 //  Created by luguanxing.
@@ -8,9 +8,9 @@
 
 #include <windows.h>
 #include <stdlib.h>
-#define Dllfunciton extern "C" __declspec(dllexport)    //ÒÔC·½Ê½µ¼³ö
+#define Dllfunciton extern "C" __declspec(dllexport)    //ä»¥Cæ–¹å¼å¯¼å‡º
 
-#pragma comment(linker, "/EXPORT:LpkInitialize=_gamehacker_LpkInitialize,@1")	//ÉèÖÃµ¼³ö±í
+#pragma comment(linker, "/EXPORT:LpkInitialize=_gamehacker_LpkInitialize,@1")	//è®¾ç½®å¯¼å‡ºè¡¨
 #pragma comment(linker, "/EXPORT:LpkTabbedTextOut=_gamehacker_LpkTabbedTextOut,@2")
 #pragma comment(linker, "/EXPORT:LpkDllInitialize=_gamehacker_LpkDllInitialize,@3")
 #pragma comment(linker, "/EXPORT:LpkDrawTextEx=_gamehacker_LpkDrawTextEx,@4")
@@ -25,12 +25,12 @@ char syslpk[250] = {0};
 HMODULE hmodule;
 FARPROC funcaddr = NULL;
 
-FARPROC WINAPI GetAddress(PCSTR pszProcName) {	//´ÓÕæÕılpk.dllÖĞÕÒĞèÒªµ÷ÓÃµÄÕæÕıº¯ÊıµØÖ·
+FARPROC WINAPI GetAddress(PCSTR pszProcName) {	//ä»çœŸæ­£lpk.dllä¸­æ‰¾éœ€è¦è°ƒç”¨çš„çœŸæ­£å‡½æ•°åœ°å€
 	funcaddr = GetProcAddress(hmodule, pszProcName);  
 	return funcaddr;
 }
 
-Dllfunciton gamehacker_LpkInitialize() {	//ÕÒÕæÕıº¯ÊıµØÖ·ºóÌø×ª
+Dllfunciton gamehacker_LpkInitialize() {	//æ‰¾çœŸæ­£å‡½æ•°åœ°å€åè·³è½¬
 	GetAddress("LpkInitialize");
 	__asm JMP EAX;
 }
@@ -91,8 +91,8 @@ BOOL APIENTRY DllMain(HMODULE hModule,  DWORD  ul_reason_for_call, LPVOID lpRese
         case DLL_PROCESS_ATTACH: {
 			GetSystemDirectory(syslpk, 250);
 			strcat(syslpk, "\\lpk");
-			hmodule = LoadLibrary(syslpk);	//¼ÓÔØÕæÕıÏµÍ³lpk.dll
-			::LoadLibrary("cheatDLL");	//¼ÓÔØ×÷±×Ä£¿élpk.dll
+			hmodule = LoadLibrary(syslpk);	//åŠ è½½çœŸæ­£ç³»ç»Ÿlpk.dll
+			::LoadLibrary("cheatDLL");	//åŠ è½½ä½œå¼Šæ¨¡å—cheatDLL.dll
         } break;
         case DLL_THREAD_ATTACH:
         case DLL_THREAD_DETACH:
