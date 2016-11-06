@@ -1,5 +1,5 @@
 //
-//  05简单DLL劫持(自写LPK.DLL模块部分)
+//  05简单DLL劫持(假LPK.DLL模块部分)
 //  C/C++
 //
 //  Created by luguanxing.
