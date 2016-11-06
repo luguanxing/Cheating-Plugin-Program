@@ -43,8 +43,8 @@
 
 ![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/05%E7%AE%80%E5%8D%95DLL%E5%8A%AB%E6%8C%81/pictures/2.jpg?raw=true)<br>
 ![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/05%E7%AE%80%E5%8D%95DLL%E5%8A%AB%E6%8C%81/pictures/3.jpg?raw=true)<br>
-**运行外挂**<br>
-此时游戏已具备作弊效果(锁定血量)<br><br><br><br><br><br>
+**打开游戏**<br>
+直接打开游戏即可,发现此时游戏已具备作弊效果(锁定血量)<br><br><br><br><br><br>
 
 
 ![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/05%E7%AE%80%E5%8D%95DLL%E5%8A%AB%E6%8C%81/pictures/4.jpg?raw=true)<br>
