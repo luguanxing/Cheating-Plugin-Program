@@ -1,5 +1,5 @@
 //
-//  05简单DLL劫持(作弊模块DLL部分)
+//  05简单DLL劫持(作弊模块cheatDLL部分)
 //  C/C++
 //
 //  Created by luguanxing.
