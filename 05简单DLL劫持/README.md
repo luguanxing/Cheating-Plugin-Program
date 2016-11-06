@@ -26,9 +26,7 @@
 
 ## 要用的函数介绍
 **__asm{ }**<br>
-执行括号内的汇编代码
-<br><br>
-
+执行括号内的汇编代码<br>
 **JMP EAX**<br>
 将EIP跳转到EAX执行，劫持DLL后要获取真正的原函数地址，使用时要进行跳转
 <br><br>
@@ -54,7 +52,7 @@
 
 ![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/05%E7%AE%80%E5%8D%95DLL%E5%8A%AB%E6%8C%81/pictures/5.jpg?raw=true)<br>
 ![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/05%E7%AE%80%E5%8D%95DLL%E5%8A%AB%E6%8C%81/pictures/6.jpg?raw=true)<br>
-**WIN7下z劫持**<br>
+**WIN7下劫持**<br>
 在WIN7下要劫持只需稍修改注册表即可<br><br><br><br><br><br>
 
 
