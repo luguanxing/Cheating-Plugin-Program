@@ -47,7 +47,7 @@
 
 ![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/05%E7%AE%80%E5%8D%95DLL%E5%8A%AB%E6%8C%81/pictures/4.jpg?raw=true)<br>
 **工具查看加载模块**<br>
-发现cheatDLL模块已加载入游戏，说明lpkj劫持成功<br><br><br><br><br><br>
+发现cheatDLL模块已加载入游戏，说明lpk劫持成功<br><br><br><br><br><br>
 
 
 ![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/05%E7%AE%80%E5%8D%95DLL%E5%8A%AB%E6%8C%81/pictures/5.jpg?raw=true)<br>
@@ -112,7 +112,7 @@ BOOL APIENTRY DllMain(HMODULE hModule,  DWORD  ul_reason_for_call, LPVOID lpRese
 <br><br><br><br>
 ```
 //
-//  05简单DLL劫持(自写LPK.DLL模块部分)
+//  05简单DLL劫持(假LPK模块部分)
 //  C/C++
 //
 //  Created by luguanxing.
