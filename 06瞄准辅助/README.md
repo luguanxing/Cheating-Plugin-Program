@@ -16,7 +16,7 @@
 <br><br>
 
 ## 对象分析
-![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/06-%E7%9E%84%E5%87%86%E8%BE%85%E5%8A%A9/pictures/game0.jpg?raw=true)<br>
+![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/06%E7%9E%84%E5%87%86%E8%BE%85%E5%8A%A9/pictures/game0.jpg?raw=true)<br>
 游戏对象为Cs1.6(3248)和CsOkgogogo<br>
 <br><br>
 
@@ -52,18 +52,18 @@ CDC类定义的是设备上下文对象的类<br>
 
 ## 编写测试效果
 
-![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/06-%E7%9E%84%E5%87%86%E8%BE%85%E5%8A%A9/pictures/cross0.gif?raw=true)<br>
+![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/06%E7%9E%84%E5%87%86%E8%BE%85%E5%8A%A9/pictures/cross0.gif?raw=true)<br>
 **打开辅助测试准星形状**<br><br><br><br><br><br>
 
-![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/06-%E7%9E%84%E5%87%86%E8%BE%85%E5%8A%A9/pictures/cross1.gif?raw=true)<br>
+![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/06%E7%9E%84%E5%87%86%E8%BE%85%E5%8A%A9/pictures/cross1.gif?raw=true)<br>
 **打开辅助测试准星颜色**<br><br><br><br><br><br>
 
-![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/06-%E7%9E%84%E5%87%86%E8%BE%85%E5%8A%A9/pictures/game3.jpg?raw=true)<br>
+![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/06%E7%9E%84%E5%87%86%E8%BE%85%E5%8A%A9/pictures/game3.jpg?raw=true)<br>
 **隐藏游戏自带准星**<br>
 首先设置Cs中的自带准星透明(进入CS控制台输入cl_crosshair_color 0 0 0或修改strike目录下config.cfg的值)<br><br><br><br><br><br>
 
-![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/06-%E7%9E%84%E5%87%86%E8%BE%85%E5%8A%A9/pictures/cross2.gif?raw=true)<br>
-![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/06-%E7%9E%84%E5%87%86%E8%BE%85%E5%8A%A9/pictures/cross3.gif?raw=true)<br>
+![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/06%E7%9E%84%E5%87%86%E8%BE%85%E5%8A%A9/pictures/cross2.gif?raw=true)<br>
+![image](https://github.com/luguanxing/Cheating-Plugin-Program/blob/master/06%E7%9E%84%E5%87%86%E8%BE%85%E5%8A%A9/pictures/cross3.gif?raw=true)<br>
 **设置复制准星后进入游戏**<br>
 这是预设好的准星能显示在游戏中
 <br><br><br><br><br><br>
