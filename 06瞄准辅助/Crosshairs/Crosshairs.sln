@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Crosshairs", "Crosshairs\Crosshairs.vcxproj", "{F64C4BE7-2113-454D-9047-0E50811FCEDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F64C4BE7-2113-454D-9047-0E50811FCEDC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F64C4BE7-2113-454D-9047-0E50811FCEDC}.Debug|Win32.Build.0 = Debug|Win32
+		{F64C4BE7-2113-454D-9047-0E50811FCEDC}.Release|Win32.ActiveCfg = Release|Win32
+		{F64C4BE7-2113-454D-9047-0E50811FCEDC}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
