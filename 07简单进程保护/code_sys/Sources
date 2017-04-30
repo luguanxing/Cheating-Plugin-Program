@@ -1,0 +1,13 @@
+#下边这行指定生成驱动名字
+TARGETNAME=hook
+#下边这行指定生成文件的类型DRIVER指驱动
+TARGETTYPE=DRIVER
+#下边这行指定生成驱动所在的路径\SYS\hook.sys
+TARGETPATH=SYS
+#下边这行指定相关头文件所在目录路径
+INCLUDES=$(BASEDIR)\inc;\
+      $(BASEDIR)\inc\wxp;\ 
+
+##上边必空一行H:\WINDDK3790(DDK目录) 等价$(BASEDIR)
+#下边这行指定驱动源代码*.cpp或者*.c
+SOURCES=hook.cpp\
