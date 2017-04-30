@@ -154,5 +154,5 @@ VOID UnHookNtOpenProcess() {
 
 ## 总体评价
 
-本驱动保护比较简单，很容易就会被OD插件解除，仅用于学习原理，在windowsXP测试成功，EXE部分可能有bug,可参考<br>
+本驱动保护比较简单，很容易就会被OD插件解除，仅用于学习原理，在windowsXP下测试成功，EXE由MFC编写可能部分有不完美之处，控制台可参考<br>
 https://github.com/luguanxing/Kernel-Driver/tree/master/10-%E7%AE%80%E5%8D%95%E8%BF%9B%E7%A8%8B%E4%BF%9D%E6%8A%A4
